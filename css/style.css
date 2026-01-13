@@ -185,6 +185,7 @@ p {
     left: 0;
     right: 0;
     height: var(--header-height);
+    padding-top: var(--space-sm);
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -352,7 +353,7 @@ p {
 }
 
 .welcome-logo {
-    width: 180px;
+    width: 240px;
     height: auto;
     margin: 0 auto var(--space-xl);
     animation: fadeInScale 0.8s ease-out;
@@ -921,7 +922,7 @@ p {
     }
 
     .welcome-logo {
-        width: 120px;
+        width: 160px;
     }
 
     .welcome-title {
