@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ResPredAI - Antimicrobial Resistance Prediction via Artificial Intelligence. A machine learning pipeline for predicting antimicrobial resistance in Gram-negative bloodstream infections.">
+    <meta name="keywords" content="antimicrobial resistance, AMR, machine learning, AI, bloodstream infections, Gram-negative bacteria, clinical decision support">
+    <meta name="author" content="Ettore Rocchi">
+
+    <title>ResPredAI - Antimicrobial Resistance Prediction via AI</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo_ResPredAI.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#" class="nav-logo">
+                    <img src="assets/logo_ResPredAI.png" alt="ResPredAI Logo" class="logo-img">
+                    <span class="logo-text">ResPredAI</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="#overview" class="nav-link">Overview</a></li>
+                    <li><a href="#paper" class="nav-link">Paper</a></li>
+                    <li><a href="https://ettorerocchi.github.io/ResPredAI/" class="nav-link" target="_blank" rel="noopener">Docs</a></li>
+                    <li><a href="https://github.com/EttoreRocchi/ResPredAI" class="nav-link nav-link-github" target="_blank" rel="noopener">GitHub</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Welcome Banner -->
+    <section class="welcome-banner" id="welcome">
+        <div class="welcome-bg"></div>
+        <div class="container">
+            <div class="welcome-content" data-aos="fade-up" data-aos-duration="1000">
+                <img src="assets/logo_ResPredAI.png" alt="ResPredAI" class="welcome-logo">
+                <h1 class="welcome-title">ResPredAI</h1>
+                <p class="welcome-tagline">Antimicrobial Resistance Prediction via Artificial Intelligence</p>
+                <p class="welcome-description">
+                    A machine learning pipeline for predicting antimicrobial resistance in Gram-negative bloodstream infections
+                </p>
+                <div class="welcome-buttons">
+                    <a href="https://ettorerocchi.github.io/ResPredAI/getting-started/quickstart/" class="btn btn-primary" target="_blank" rel="noopener">
+                        Get Started
+                    </a>
+                    <a href="#paper" class="btn btn-secondary">
+                        Read the Paper
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" data-aos="fade" data-aos-delay="1500">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="section overview" id="overview">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Project Overview</h2>
+            <div class="overview-content">
+                <div class="overview-text" data-aos="fade-right" data-aos-delay="100">
+                    <p>
+                        <strong>ResPredAI</strong> is an open-source machine learning pipeline designed to predict antimicrobial resistance (AMR) in Gram-negative bloodstream infections. Built to support clinical decision-making, it implements the methodology described in our research published in <em>npj Digital Medicine</em>.
+                    </p>
+                    <p>
+                        The tool provides a comprehensive workflow for training, validating, and deploying predictive models that can help clinicians anticipate bacterial resistance patterns, enabling more informed antibiotic prescribing decisions.
+                    </p>
+                </div>
+                <div class="features-grid" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Multiple ML Models</h3>
+                        <p>Support for 8 algorithms including Random Forest, XGBoost, CatBoost, and TabPFN</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </div>
+                        <h3>Rigorous Validation</h3>
+                        <p>Nested cross-validation with group-aware stratification to prevent data leakage</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M3 9h18"/>
+                                <path d="M9 21V9"/>
+                            </svg>
+                        </div>
+                        <h3>Feature Importance</h3>
+                        <p>Built-in feature importance extraction with SHAP-based explanations</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            </svg>
+                        </div>
+                        <h3>Comprehensive Docs</h3>
+                        <p>Full documentation with tutorials, CLI reference, and examples</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Original Paper -->
+    <section class="section paper" id="paper">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Original Research</h2>
+            <div class="paper-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="paper-content">
+                    <div class="paper-badge">npj Digital Medicine</div>
+                    <h3 class="paper-title">
+                        Artificial Intelligence model to predict resistances in Gram-negative bloodstream infections
+                    </h3>
+                    <p class="paper-authors">
+                        Bonazzetti, C., Rocchi, E., Toschi, A. <em>et al.</em>
+                    </p>
+                    <p class="paper-journal">
+                        <em>npj Digital Medicine</em> <strong>8</strong>, 319 (2025)
+                    </p>
+                    <div class="paper-abstract">
+                        <h4>Abstract</h4>
+                        <p>
+                            Artificial intelligence (AI) models are promising tools for predicting antimicrobial susceptibility in gram-negative bloodstream infections (GN-BSI). Single-center study on hospitalized patients with GN-BSI, over 7-year period, aimed to predict resistance to fluoroquinolones (FQ-R), third generation cephalosporins (3GC-R), beta-lactam/beta-lactamase inhibitors (BL/BLI-R) and carbapenems (C-R) was performed. Analyses were carried out within a machine learning framework, developed using the scikit-learn Python package. Overall, 2552 patients were included. Enterobacterales accounted for 85.5% of isolates, with E. coli, Klebsiella spp, and Proteus spp being most common. Distribution of resistance was FQ-R 48.6%, 3GC-R 40.1%, BL/BLI-R 29.9%, and C-R 16.9%. Models' validation showed good performance predicting antibiotic resistance for all four resistance classes, with the best performance for C-R (AUC-ROC 0.921 ± 0.013). The developed pipeline has been made available (<a href="https://github.com/EttoreRocchi/ResPredAI" target="_blank" rel="noopener">https://github.com/EttoreRocchi/ResPredAI</a>), along with documentation for running the same workflow on a different dataset, to account for local epidemiology and clinical features.
+                        </p>
+                    </div>
+                    <div class="paper-links">
+                        <a href="https://doi.org/10.1038/s41746-025-01696-x" class="btn btn-primary" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                <polyline points="15 3 21 3 21 9"/>
+                                <line x1="10" y1="14" x2="21" y2="3"/>
+                            </svg>
+                            View Paper (DOI)
+                        </a>
+                        <button class="btn btn-outline cite-btn" data-citation="Bonazzetti, C., Rocchi, E., Toschi, A. et al. Artificial Intelligence model to predict resistances in Gram-negative bloodstream infections. npj Digit. Med. 8, 319 (2025). https://doi.org/10.1038/s41746-025-01696-x">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Copy Citation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="section quick-links" id="links">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get Started</h2>
+            <div class="links-grid">
+                <a href="https://ettorerocchi.github.io/ResPredAI/" class="link-card" data-aos="fade-up" data-aos-delay="100" target="_blank" rel="noopener">
+                    <div class="link-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Documentation</h3>
+                    <p>Installation guides, CLI reference, tutorials, and API documentation</p>
+                </a>
+                <a href="https://github.com/EttoreRocchi/ResPredAI" class="link-card" data-aos="fade-up" data-aos-delay="200" target="_blank" rel="noopener">
+                    <div class="link-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </div>
+                    <h3>GitHub Repository</h3>
+                    <p>Source code, issue tracking, and contribution guidelines</p>
+                    <div class="badges">
+                        <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License">
+                        <img src="https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue" alt="Python versions">
+                    </div>
+                </a>
+                <a href="https://pypi.org/project/respredai/" class="link-card" data-aos="fade-up" data-aos-delay="300" target="_blank" rel="noopener">
+                    <div class="link-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="4 17 10 11 4 5"/>
+                            <line x1="12" y1="19" x2="20" y2="19"/>
+                        </svg>
+                    </div>
+                    <h3>Install via pip</h3>
+                    <p class="code-snippet">pip install respredai</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo_ResPredAI.png" alt="ResPredAI" class="footer-logo">
+                    <p>ResPredAI</p>
+                </div>
+                <div class="footer-funding">
+                    <p>
+                        This research was supported by the European Union - NextGenerationEU through the Italian Ministry of University and Research (MUR) under the National Recovery and Resilience Plan (PNRR).
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/EttoreRocchi/ResPredAI/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>
+                    <a href="https://github.com/EttoreRocchi/ResPredAI" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://ettorerocchi.github.io/ResPredAI/" target="_blank" rel="noopener">Documentation</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ResPredAI. Open source under MIT License.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
