@@ -10,9 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize navigation
     initNavigation();
 
-    // Initialize header scroll effect
-    initHeaderScroll();
-
     // Load publications from JSON
     loadPublications();
 
@@ -21,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize smooth scroll for anchor links
     initSmoothScroll();
+
+    // Initialize scroll indicator fade on scroll
+    initScrollIndicatorFade();
 });
 
 /**
@@ -71,32 +71,6 @@ function initNavigation() {
             }
         });
     }
-}
-
-/**
- * Initialize header scroll effect (shrink on scroll)
- */
-function initHeaderScroll() {
-    const header = document.getElementById('header');
-    let lastScrollY = 0;
-    let ticking = false;
-
-    function updateHeader() {
-        if (window.scrollY > 100) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-        ticking = false;
-    }
-
-    window.addEventListener('scroll', function() {
-        lastScrollY = window.scrollY;
-        if (!ticking) {
-            window.requestAnimationFrame(updateHeader);
-            ticking = true;
-        }
-    });
 }
 
 /**
@@ -288,4 +262,24 @@ function initSmoothScroll() {
             }
         });
     });
+}
+
+/**
+ * Initialize scroll text fade on scroll
+ */
+function initScrollIndicatorFade() {
+    const scrollText = document.querySelector('.scroll-text');
+
+    if (!scrollText) return;
+
+    // Wait for AOS animation to complete (1500ms delay + 800ms duration)
+    setTimeout(function() {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                scrollText.style.opacity = '0';
+            } else {
+                scrollText.style.opacity = '0.8';
+            }
+        });
+    }, 2500);
 }

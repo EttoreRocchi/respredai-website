@@ -22,18 +22,22 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ettorerocchi.github.io/respredai-website/">
 </head>
 <body>
     <!-- Header -->
     <header class="header" id="header">
         <div class="container">
             <nav class="nav">
-                <a href="#" class="nav-logo">
+                <a href="index.html" class="nav-logo">
                     <img src="assets/logo_ResPredAI.png" alt="ResPredAI Logo" class="logo-img">
                     <span class="logo-text">ResPredAI</span>
                 </a>
                 <ul class="nav-menu">
                     <li><a href="#overview" class="nav-link">Overview</a></li>
+                    <li><a href="#cli" class="nav-link">CLI</a></li>
                     <li><a href="#paper" class="nav-link">Paper</a></li>
                     <li><a href="https://ettorerocchi.github.io/ResPredAI/" class="nav-link" target="_blank" rel="noopener">Docs</a></li>
                     <li><a href="https://github.com/EttoreRocchi/ResPredAI" class="nav-link nav-link-github" target="_blank" rel="noopener">GitHub</a></li>
@@ -68,10 +72,10 @@
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator" data-aos="fade" data-aos-delay="1500">
-            <span>Scroll to explore</span>
+        <a href="#overview" class="scroll-indicator">
+            <span class="scroll-text">Discover more!</span>
             <div class="scroll-arrow"></div>
-        </div>
+        </a>
     </section>
 
     <!-- Project Overview -->
@@ -84,7 +88,7 @@
                         <strong>ResPredAI</strong> is an open-source machine learning pipeline designed to predict antimicrobial resistance (AMR) in Gram-negative bloodstream infections. Built to support clinical decision-making, it implements the methodology described in our research published in <em>npj Digital Medicine</em>.
                     </p>
                     <p>
-                        The tool provides a comprehensive workflow for training, validating, and deploying predictive models that can help clinicians anticipate bacterial resistance patterns, enabling more informed antibiotic prescribing decisions.
+                        The framework provides a comprehensive workflow for training, validating, and deploying predictive models, enabling clinicians to anticipate resistance patterns and optimize antimicrobial therapy selection.
                     </p>
                 </div>
                 <div class="features-grid" data-aos="fade-up" data-aos-delay="200">
@@ -97,7 +101,7 @@
                             </svg>
                         </div>
                         <h3>Multiple ML Models</h3>
-                        <p>Support for 8 algorithms including Random Forest, XGBoost, CatBoost, and TabPFN</p>
+                        <p>Support for 9 algorithms including Random Forest, XGBoost, CatBoost, and TabPFN</p>
                     </div>
                     <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="feature-icon">
@@ -117,8 +121,8 @@
                                 <path d="M9 21V9"/>
                             </svg>
                         </div>
-                        <h3>Feature Importance</h3>
-                        <p>Built-in feature importance extraction with SHAP-based explanations</p>
+                        <h3>Model Interpretability</h3>
+                        <p>Feature importance analysis using native and SHAP-based methods</p>
                     </div>
                     <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
                         <div class="feature-icon">
@@ -127,9 +131,37 @@
                                 <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
                             </svg>
                         </div>
-                        <h3>Comprehensive Docs</h3>
-                        <p>Full documentation with tutorials, CLI reference, and examples</p>
+                        <h3>Documentation</h3>
+                        <p>Detailed guides, CLI reference, tutorials, and usage examples</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLI Commands -->
+    <section class="section cli" id="cli">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Command Line Interface</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                A streamlined interface for reproducible model development and validation
+            </p>
+            <div class="cli-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="cli-card">
+                    <code class="cli-command">respredai run</code>
+                    <p class="cli-description">Execute nested cross-validation with configurable parameters</p>
+                </div>
+                <div class="cli-card">
+                    <code class="cli-command">respredai feature-importance</code>
+                    <p class="cli-description">Extract feature contributions for model interpretability</p>
+                </div>
+                <div class="cli-card">
+                    <code class="cli-command">respredai train</code>
+                    <p class="cli-description">Fit models with automated hyperparameter optimization</p>
+                </div>
+                <div class="cli-card">
+                    <code class="cli-command">respredai evaluate</code>
+                    <p class="cli-description">Assess model performance on external datasets</p>
                 </div>
             </div>
         </div>
@@ -203,8 +235,9 @@
                     <h3>GitHub Repository</h3>
                     <p>Source code, issue tracking, and contribution guidelines</p>
                     <div class="badges">
-                        <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License">
-                        <img src="https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue" alt="Python versions">
+                        <img src="https://img.shields.io/badge/python-3.9%2B-blue" alt="Python 3.9+">
+                        <img src="https://img.shields.io/pypi/v/respredai" alt="PyPI version">
+                        <img src="https://img.shields.io/github/license/EttoreRocchi/ResPredAI" alt="License">
                     </div>
                 </a>
                 <a href="https://pypi.org/project/respredai/" class="link-card" data-aos="fade-up" data-aos-delay="300" target="_blank" rel="noopener">
@@ -231,7 +264,7 @@
                 </div>
                 <div class="footer-funding">
                     <p>
-                        This research was supported by the European Union - NextGenerationEU through the Italian Ministry of University and Research (MUR) under the National Recovery and Resilience Plan (PNRR).
+                        This research was supported by the European Union - NextGenerationEU through the Italian Ministry of University and Research (MUR) under the National Recovery and Resilience Plan (NRRP).
                     </p>
                 </div>
                 <div class="footer-links">
@@ -241,7 +274,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 ResPredAI. Open source under MIT License.</p>
+                <p>&copy; 2026 ResPredAI. Open source under MIT License.</p>
             </div>
         </div>
     </footer>
